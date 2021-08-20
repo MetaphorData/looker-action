@@ -1,0 +1,32 @@
+name: 'Metaphor DBT Metadata'
+description: 'Publish DBT metadata to Metaphor'
+inputs:
+  looker-base-url:
+    description: 'Base URL for Looker API'
+    required: true
+
+  looker-client-id:
+    description: 'Client ID for Looker API'
+    required: true
+
+  looker-client-secret:
+    description: 'Client secret for Looker API'
+    required: true
+
+  lookml-dir:
+    description: 'Path to LookML project directory'
+    required: true
+
+  s3-path: 
+    description: 'S3 path for outputting the metadata'
+    required: true
+
+runs:
+  using: 'docker'
+  image: 'Dockerfile'
+  args:
+    - ${{ inputs.looker-base-url }}
+    - ${{ inputs.looker-client-id }}
+    - ${{ inputs.looker-client-secret }}
+    - ${{ inputs.lookml-dir }}
+    - ${{ inputs.s3-path }}
