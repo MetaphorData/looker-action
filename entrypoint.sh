@@ -8,10 +8,10 @@ cat << EOF > looker.json
   "client_id": "$2",
   "client_secret": "$3",
   "lookml_dir": "/github/workspace/$4",
-  "api": null,
-  "kinesis": null,
-  "file": {
-    "output": "$5"
+  "output": {
+    "file": {
+      "path": "$5"
+    }
   }
 }
 EOF
