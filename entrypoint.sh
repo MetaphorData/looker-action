@@ -10,6 +10,7 @@ lookml_dir: "/github/workspace/$4"
 output:
   file:
     path: "$5"
+projectSourceUrl: "$6"
 EOF
 
 python -m metaphor.looker looker.yaml
