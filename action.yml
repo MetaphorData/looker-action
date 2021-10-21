@@ -21,6 +21,11 @@ inputs:
     description: 'S3 path for outputting the metadata'
     required: true
 
+  project_source_code_url:
+    description: 'The URL pointing to the project source code directory'
+    required: false
+    default: ''
+
 runs:
   using: 'docker'
   image: 'Dockerfile'
@@ -29,4 +34,5 @@ runs:
     - ${{ inputs.looker-client-id }}
     - ${{ inputs.looker-client-secret }}
     - ${{ inputs.lookml-dir }}
+    - ${{ inputs.project_source_code_url }}
     - ${{ inputs.s3-path }}
