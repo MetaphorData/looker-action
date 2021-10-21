@@ -34,5 +34,5 @@ runs:
     - ${{ inputs.looker-client-id }}
     - ${{ inputs.looker-client-secret }}
     - ${{ inputs.lookml-dir }}
-    - ${{ inputs.s3-path }}
     - ${{ inputs.project_source_code_url }}
+    - ${{ inputs.s3-path }}
