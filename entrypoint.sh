@@ -8,9 +8,13 @@ client_id: "$2"
 client_secret: "$3"
 lookml_dir: "/github/workspace/$4"
 projectSourceUrl: "$5"
+connections: $(cat "/github/workspace/$6" | jq -r .)
 output:
   file:
-    path: "$6"
+    path: "$7"
 EOF
+
+echo "Generated looker.yaml:"
+cat looker.yaml
 
 python -m metaphor.looker looker.yaml
