@@ -15,9 +15,12 @@ Add the following to the [GitHub Workflow](https://docs.github.com/en/actions/re
     looker-client-id: ''
     looker-client-secret: ''
 
-    # Path to the Looker project, generally "./"    
+    # Path to the Looker project, generally "./"
     lookml-dir: ''
     
+    # A JSON file containing Looker database connections settings
+    connection-map: ''
+
     # S3 URL for the output, in the form of s3://<bucket>/<file_name>.json
     s3-path: ''
 
@@ -25,6 +28,25 @@ Add the following to the [GitHub Workflow](https://docs.github.com/en/actions/re
     project_source_code_url: ''
 ```
 
+`connection-map` points to a JSON file (relative to the repo root) that contains the settings for all Looker database connections used in your LookML project. The format looks like this:
+
+```json
+{
+  "<connection_name>": {
+    "database": "<database_for_the_connection>",
+    "default_schema": "<optional_default_schema>",
+    "account": "<snowflake_account_identifier>"
+  }
+}
+```
+
+You can find these settings under `Admin` > `Database` > `Connections` in Looker.
+
 # License
 
 The scripts and documentation in this project are released under the [Apache V2 License](./LICENSE).
+
+
+# DS_PROD
+SOURCE
+CANVALYTICS__EVENT_TRACKcanvalytics_events
