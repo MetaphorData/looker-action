@@ -1,3 +1,5 @@
+<img src="./logo.png" width="300" />
+
 # Metaphor Looker GitHub Action
 A [GitHub Action](https://docs.github.com/en/actions) for publishing Looker metadata to [Metaphor](https://metaphor.io).
 
