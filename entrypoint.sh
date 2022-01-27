@@ -11,7 +11,7 @@ project_source_url: "$5"
 connections: $(cat "/github/workspace/$6" | jq -r .)
 output:
   file:
-    path: "$7"
+    directory: "$7"
 EOF
 
 echo "Generated looker.yaml:"
