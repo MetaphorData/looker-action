@@ -26,7 +26,7 @@ Add the following to the [GitHub Workflow](https://docs.github.com/en/actions/re
     # (Optional) The URL pointing to the project source code directory, e.g. https://github.com/<account>/<repo> or https://<account>.cloud.looker.com/projects/<project>/files/
     project-source-url: ''
 
-    # S3 URL for the output, in the form of s3://<bucket>/<file_name>.json
+    # S3 URL for the output, in the form of s3://<bucket>/<directory>
     s3-path: ''
 ```
 
