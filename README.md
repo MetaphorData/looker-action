@@ -9,6 +9,12 @@ Add the following to the [GitHub Workflow](https://docs.github.com/en/actions/re
 
 ```yaml
 - uses: MetaphorData/looker-action@v1
+  env:
+    # The AWS credentials & region to use when uploading files to S3 
+    AWS_ACCESS_KEY_ID: ''
+    AWS_SECRET_ACCESS_KEY: ''
+    AWS_DEFAULT_REGION: ''
+    
   with:
     # Base URL for your Looker instance, generally in the form of "https://<your_company>.cloud.looker.com"
     looker-base-url: ''
