@@ -17,4 +17,4 @@ EOF
 echo "Generated looker.yaml:"
 cat looker.yaml
 
-python -m metaphor.looker looker.yaml
+metaphor looker looker.yaml
